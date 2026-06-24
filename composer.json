@@ -1,0 +1,14 @@
+{
+    "name": "technicalkumargaurav/ppt-exporter",
+    "description": "Export tabular data to PowerPoint presentations",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Technicalkumargaurav\\PptExporter\\": "src/"
+        }
+    },
+    "require": {
+        "phpoffice/phppresentation": "^1.2"
+    }
+}
