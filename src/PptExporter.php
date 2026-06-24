@@ -4,6 +4,8 @@ namespace Technicalkumargaurav\PptExporter;
 
 use PhpOffice\PhpPresentation\PhpPresentation;
 use PhpOffice\PhpPresentation\IOFactory;
+use PhpOffice\PhpPresentation\Style\Color;
+use PhpOffice\PhpPresentation\Style\Fill;
 
 class PptExporter
 {
@@ -110,8 +112,14 @@ class PptExporter
 
                     // Header row styling
                     if ($rowIndex === 0) {
+
                         $textRun->getFont()
-                            ->setBold(true);
+                            ->setBold(true)
+                            ->setColor(new \PhpOffice\PhpPresentation\Style\Color('FFFFFF'));
+
+                        $cell->getFill()
+                            ->setFillType(\PhpOffice\PhpPresentation\Style\Fill::FILL_SOLID)
+                            ->setStartColor(new \PhpOffice\PhpPresentation\Style\Color('4472C4'));
                     }
                 }
             }
